@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<application xmlns="http://ns.adobe.com/air/application/20.0">
+    <id>Main</id>
+    <filename>Main</filename>
+    <name>Main</name>
+    <versionNumber>0.0.0</versionNumber>
+    <extensions>
+        <extensionID>ru.flashpress.FPUniqueId</extensionID>
+    </extensions>
+    <initialWindow>
+        <content>SWF file name is set automatically at compile time</content>
+        <visible>true</visible>
+        <autoOrients>true</autoOrients>
+        <fullScreen>true</fullScreen>
+    </initialWindow>
+    <iPhone>
+        <!-- A list of plist key/value pairs to be added to the application Info.plist -->
+        <InfoAdditions>
+            <![CDATA[
+            <key>UIDeviceFamily</key>
+            <array>
+                <!-- iPhone and iPod touch devices -->
+                <string>1</string>
+                <!-- iPad devices -->
+                <string>2</string>
+            </array>
+            <!--<key>UIStatusBarStyle</key>-->
+            <!--<string>UIStatusBarStyleBlackOpaque</string>-->
+            <!--<key>UIRequiresPersistentWiFi</key>-->
+            <!--<string>YES</string>-->
+            ]]>
+        </InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+
+    <android>
+    <manifestAdditions><![CDATA[
+        <manifest android:installLocation="auto">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+        </manifest>]]>
+    </manifestAdditions>
+</android>
+
+</application>
